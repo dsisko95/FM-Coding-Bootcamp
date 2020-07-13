@@ -6,7 +6,7 @@ const imageContainer = document.querySelector('#author-img');
 const authorText = document.querySelector('#author-text');
 const authorName = document.querySelector('#author-name');
 
-const imagePaths = ['/images/image-tanya.jpg', '/images/image-john.jpg']
+const imagePaths = ['../images/image-tanya.JPG', '../images/image-john.JPG']
 let imageIndex = 0;
 
 // Events
