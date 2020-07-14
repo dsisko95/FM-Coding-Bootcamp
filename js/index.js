@@ -6,28 +6,29 @@ const imageContainer = document.querySelector('#author-img');
 const authorText = document.querySelector('#author-text');
 const authorName = document.querySelector('#author-name');
 
-const imagePaths = ['../images/image-tanya.JPG', '../images/image-john.JPG']
+const imagePaths = ['/FM-Coding-Bootcamp/images/image-tanya.jpg', '/FM-Coding-Bootcamp/images/image-john.jpg']
 let imageIndex = 0;
 
 // Events
 
-previousIcon.addEventListener('click', () => {
-    updateImageIndex();
-    updateDynamicTextContent();
+previousIcon.addEventListener('click', () => updateBackground());
+nextIcon.addEventListener('click', () => updateBackground());
 
-    imageContainer.style.background = `url('${imagePaths[imageIndex]}') no-repeat`;
-    imageContainer.style.backgroundSize = '100% 100%';
-});
-
-nextIcon.addEventListener('click', () => {
-    updateImageIndex();
-    updateDynamicTextContent();
-
-    imageContainer.style.background = `url('${imagePaths[imageIndex]}') no-repeat`;
-    imageContainer.style.backgroundSize = '100% 100%';
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        updateBackground();
+    }
 });
 
 // LOGIC
+
+function updateBackground() {
+    updateImageIndex();
+    updateDynamicTextContent();
+
+    imageContainer.style.background = `url('${imagePaths[imageIndex]}') no-repeat`;
+    imageContainer.style.backgroundSize = '100% 100%';
+}
 
 function updateImageIndex() {
     const newImageIndex = imageIndex === 1 ? 0 : 1;

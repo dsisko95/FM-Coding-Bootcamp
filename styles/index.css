@@ -38,7 +38,7 @@ body {
 
 .main-container .main-container-content .author-info #author-name {
   margin-top: 1.5em;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .main-container .main-container-content .author-info #job-title {
@@ -139,7 +139,7 @@ body {
             flex-direction: column;
   }
   .main-container .main-container-content .author-info #author-name #job-title {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
   .main-container .main-container-content #author-img {
     top: 50%;
